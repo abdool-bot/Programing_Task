@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RotationSpeedDisplayer : MonoBehaviour
+/*
+    This script has the function to display the current
+    rotation value on the canvas
+*/
 
+public class RotationSpeedDisplayer : MonoBehaviour
 {
+    // Exposed variable to assign the text that should be affected
     public Text handleText;
 
     void Start()
@@ -15,6 +20,7 @@ public class RotationSpeedDisplayer : MonoBehaviour
     
     public void textUpdater(float value)
     {
+        // displaying the value as a string
         handleText.text = Mathf.RoundToInt(value) + "";    
     }
 }
